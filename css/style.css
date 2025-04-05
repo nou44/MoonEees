@@ -1,1 +1,779 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@300..700&family=Neucha&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+*{
+    margin: 0;
+    padding: 0;
 
+  
+}
+
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-size: cover;
+    background:linear-gradient(to right, #9a8b9d, #3d0149);  
+    position: relative; 
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+  
+
+}
+
+main{
+    width: (1000px, 80vw);
+    margin: auto;
+    background-attachment: fixed;
+
+}
+
+
+
+.slider{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent);
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.banner img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    
+  
+    
+}
+
+
+
+.effect, .text{
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    padding-top: 10px;
+    font-size: 20px;
+    font-family:"Titan One", sans-serif; 
+    z-index: 1;
+   
+
+}
+.effect{
+width: 30px;
+height: 30px;
+background-color:linear-gradient(to right, #ffffff, #f1ed0a) ;
+border-radius: 50%;
+padding: 10px;
+overflow: hidden;
+animation: ef 3s ease-in-out infinite alternate;
+
+
+}
+.content{
+    color: #ffcc00;
+    position: absolute;
+    left: 0;
+    width: max-content;
+    animation: ct 3s ease-in-out infinite alternate;
+}
+
+
+.effect, .text, content{
+    left: 5%;
+    top: 3%;
+}
+@keyframes ef{
+    from{
+        transform: translate(-15px,0);
+    }
+    to{
+        transform: translate(85px,0);
+    }
+}
+@keyframes ct{
+    from{
+        transform: translate(15px,0);
+    }
+    to{
+        transform: translate(-85px,0);
+    }
+}
+.slider .list{
+    display: flex;
+    width: 50%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+    left: 14%;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+
+    left: 50%;
+    cursor: pointer;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+}
+.slider .list .item img{
+    width: 100%;
+}
+
+  
+  @keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+.slider[reverse="true"] .item{
+    animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
+    }
+}
+
+
+.story-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+
+  .story-container {
+    position: absolute;
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .story-image {
+    width: 40%;
+    border-radius: 10px;
+    
+  }
+  
+  .story-text {
+    width: 50%;
+    font-size: 1.2rem;
+    color: #1a1a1a;
+    padding: 20px;
+    line-height: 1.6;
+    font-family:"Chewy", system-ui; 
+    border: 2px solid #a020f0;
+    box-shadow: 
+     0 0 10px #a020f0,
+     0 0 20px #a020f0,
+     0 0 30px #a020f0 inset;
+     
+  }
+  .story-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* يجعل الزر يتموضع بناءً على هذا العنصر */
+    padding-bottom: 50px; /* إضافة مساحة في الأسفل حتى لا يكون الزر ملتصقًا */
+}
+
+.see-more-btn {
+    background: #ffcc00;
+    color: #1a0132;
+    font-family: "Titan One", sans-serif;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.5);
+    
+    position: absolute;
+    bottom: 20px; /* تثبيت الزر في الأسفل */
+    left: 50%;
+    transform: translateX(-50%); /* يجعله في المنتصف أفقيًا */
+}
+
+.see-more-btn:hover {
+    background: #e6b800;
+    transform: translateX(-50%) scale(1.1); /* تكبير الزر عند التحويم مع الحفاظ على تمركزه */
+}
+@media screen and (max-width: 768px){
+.story-section{
+    min-height: 400px;
+    padding-bottom: 40px;
+}
+.see-more-btn{
+    bottom: 0;
+}
+} 
+    
+
+  .glow-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color:transparent;
+    color: #fff;
+    border: 0 solid ;
+    border-radius: 50px;
+    padding: 5px 14px 8px 19px;
+    font-size: 15px;
+    font-family:"Titan One", sans-serif;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+.glow-btn:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 0 25px rgb(212, 209, 231), 0 0 50px rgb(250, 250, 249);
+}
+
+.btn-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 5px;
+    position: relative;
+    right: 15px;
+}
+
+
+  .social-icons{
+    width: 50px;
+    position: fixed;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.social-icons img{
+    display: block;
+    width: 25px;
+    margin: 0 auto 20px;
+    cursor: pointer;
+    transition: 2s;
+}
+.social-icons img:hover{
+    transform: rotate(360deg);
+    
+
+}
+
+.features-section {
+    text-align: center;
+    padding: 80px 20px;
+   
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #151414;
+   font-family:  "Titan One", sans-serif
+   
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.feature-card img {
+    width: 80%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.feature-card img:hover{
+    width: 100%;
+}
+
+.feature-card h3 {
+    margin: 15px 0 10px;
+    color: #222;
+    font-family: "Titan One", sans-serif;
+}
+
+.feature-card p {
+    color: #fdf8f8;
+    font-size: 0.9rem;
+    font-family:"Titan One", sans-serif ;
+
+}
+/* قسم خارطة الطريق */
+.roadmap-section {
+    text-align: center;
+    padding: 80px 20px;
+   color: #fff;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* تصميم الخط الزمني */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #ff9800, #ff5722);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #ff9800;
+    margin-bottom: 5px;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+/* ✅ نحافظ على تصميم القسم الأصلي */
+.minting-section {
+    text-align: center;
+    padding: 80px 20px;
+   
+    color: #fff;
+}
+
+.mint-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Titan One", sans-serif;
+}
+
+.mint-title span {
+    color: #ffcc00;
+}
+
+.mint-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+    font-family:"Titan One", sans-serif ;
+}
+
+.mint-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.3);
+}
+
+.nft-count {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: "Titan One", sans-serif;
+}
+
+.mint-button {
+    background: #ffcc00;
+    color: #111;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: "Titan One", sans-serif;
+}
+
+.mint-button:hover {
+    background: #ff9900;
+}
+
+.mint-info {
+    margin-top: 15px;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.wallet-instruction {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    font-family: "Titan One", sans-serif;
+}
+
+/* ✅ إضافة صور NFTs بشكل دائري */
+.nft-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.nft-img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid #ffcc00;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.nft-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   padding: 50px 0;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 1000px;
+    gap: 50px;
+}
+
+.image-box {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px rgba(255, 204, 0, 0.6);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-box:hover {
+    transform: scale(1.05);
+}
+.info-box {
+    max-width: 500px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+.info-box h2 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.info-box h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffcc00;
+}
+
+.info-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.portfolio-btn {
+    background: #ffcc00;
+    font-family: "Titan One", sans-serif;
+    color: #1a0132;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 5px 15px rgba(255, 204, 0, 0.5);
+}
+
+.portfolio-btn:hover {
+    background: #e6b800;
+    transform: scale(1.1);
+}
+.footer-section {
+  
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards; /* تفعيل الأنيميشن عند الوصول */
+}
+
+.footer-section.active {
+    opacity: 1;
+    animation: fadeIn 1s ease-out forwards; /* التأثير يظهر مرة أخرى عند الوصول */
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 150px;
+    animation: logoFadeIn 1.5s ease-out;
+}
+
+.footer-info {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-info span {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .image-box {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    .image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+    
+  
+@media  screen and (max-width: 1024px) {
+    .banner img{
+      
+        left: 20%;
+       
+    }
+    .feature-card{
+        width: 200px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .feature-card img{
+width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    
+    .banner img{
+        height: auto;
+        width: 300px;
+        left: 20%;
+        justify-content: center;
+    } 
+    .effect, .text, content{
+        left: 5px;
+        top: 5px;
+    }
+    .slider .list .item img{
+        position: relative;
+        top: 5px;
+    }
+    .glow-btn{
+        padding: 2px 8px 5px 12px;
+    }
+    .btn-logo{
+        right: 10px;
+    }
+    .story-text {
+        position: relative;
+        right: -20px;
+        width: 50%;
+        height: 50%;
+        font-size: 0.9rem;
+        box-shadow: 
+        0 0 5px #a020f0,
+        0 0 10px #a020f0,
+        0 0 15px #a020f0 inset;
+    }
+    .story-image{
+       width: 50%;
+    } 
+    .body{
+        background-size: 100% auto;
+        background-position: center;
+    }
+    .feature-card{
+        width: 200px;
+    }
+}
+
+
+@media screen and(max-width:360px) {
+    .body{
+        background-size: contain;
+        background-position: center;
+    }
+    .banner img{
+      width: 100px;
+      right: 10px;
+    }
+    .glow-btn{
+        padding: 3px 5px;
+        font-size: 10px;
+    }
+   
+ 
+}
+@media screen and (max-width: 768px) {
+    .story-container {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+    }
+
+    .story-text {
+        width: 80%;  /* تقليل عرض النص */
+        font-size: 1rem;
+        padding: 15px;
+        border-width: 2px; /* إعادة سماكة الإطار */
+        box-shadow: 
+         0 0 5px #a020f0,
+         0 0 10px #a020f0,
+         0 0 15px #a020f0 inset; /* تقليل تأثير الظل */
+    }
+
+    .story-image {
+        width: 70%;
+        max-width: 250px; /* تصغير حجم الصورة قليلاً */
+        margin-top: 15px;
+    }
+}
