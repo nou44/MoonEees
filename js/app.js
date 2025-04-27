@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {x: 200, opacity: 0}, 
             {x: 0, opacity: 1, duration: 1.5, ease: 'power2.out'}
           );
-          gsap.to(container, {opacity: 1, duration: 2});
+          gsap.to(container, {opacity: 1, duration: 3});
         } else {
           gsap.to(container, {opacity: 0, visibility: 'hidden', duration: 1});
         }
