@@ -301,6 +301,10 @@ animation: ef 3s ease-in-out infinite alternate;
     cursor: pointer;
     transition: 2s;
 }
+.social-icons li{
+    list-style-type: none;  
+    padding: 0;
+}
 .social-icons img:hover{
     transform: rotate(360deg);
     
