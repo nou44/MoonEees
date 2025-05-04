@@ -378,9 +378,13 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(footer);
 });
 
-function toggleMenu(icon) {
-  icon.classList.toggle("open");
-  const nav = document.getElementById("navbar");
-  nav.classList.toggle("show");
+let toggle = false;
+function toggleMenu() {
+  const links = document.getElementById("nav-links");
+  const icon = document.querySelector(".menu-toggle");
+  toggle = !toggle;
+  links.classList.toggle("active");
+  icon.textContent = toggle ? "✖" : "☰";
 }
+
 
