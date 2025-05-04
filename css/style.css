@@ -61,57 +61,6 @@ main{
 
 
 
-.effect, .text{
-    position: fixed;
-    top: 30%;
-    left: 30%;
-    padding-top: 10px;
-    font-size: 20px;
-    font-family:"Titan One", sans-serif; 
-    z-index: 1;
-   
-
-}
-.effect{
-width: 30px;
-height: 30px;
-background-color:linear-gradient(to right, #ffffff, #f1ed0a) ;
-border-radius: 50%;
-padding: 10px;
-overflow: hidden;
-animation: ef 3s ease-in-out infinite alternate;
-
-
-}
-.content{
-    color: #ffcc00;
-    position: absolute;
-    left: 0;
-    width: max-content;
-    animation: ct 3s ease-in-out infinite alternate;
-}
-
-
-.effect, .text, content{
-    left: 5%;
-    top: 3%;
-}
-@keyframes ef{
-    from{
-        transform: translate(-15px,0);
-    }
-    to{
-        transform: translate(85px,0);
-    }
-}
-@keyframes ct{
-    from{
-        transform: translate(15px,0);
-    }
-    to{
-        transform: translate(-85px,0);
-    }
-}
 .slider .list{
     display: flex;
     width: 50%;
