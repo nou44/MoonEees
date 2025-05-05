@@ -373,4 +373,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 footer.classList.remove('active'); // إعادة الأنيميشن عند مغادرة القسم
             }
         });
-
+  });
+    }, { threshold: 0.5 });
+    
+    observer.observe(footer);
+});
