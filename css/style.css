@@ -81,25 +81,34 @@ main{
   overflow: hidden; /* يمنع العناصر من الخروج */
 }
 
-/* باقي نفس التنسيق للداخل */
 #side-navbar ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  justify-content: center; /* وسط عمودي */
   align-items: center;
+  gap: 12px; /* بدل margin كبير */
+}
+
+#side-navbar li {
+  width: 100%;
+  text-align: center;
 }
 
 #side-navbar li a {
+  display: block;
+  width: 100%;
   text-decoration: none;
   color: #8a3472;
-  font-size: 18px;
-  padding: 10px 18px;
+  font-size: 20px;
+  padding: 10px;
   border: 1px solid transparent;
   border-radius: 12px;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 #side-navbar li a:hover {
@@ -108,6 +117,7 @@ main{
   transform: scale(1.05);
   border-color: #ffb6c1;
 }
+
 
 
 .slider{
