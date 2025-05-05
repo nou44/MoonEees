@@ -385,23 +385,20 @@ function toggleMenu() {
 
   if (!menuOpen) {
     navbar.style.left = "0";
-    toggleBtn.innerHTML = "+";
     menuOpen = true;
   } else {
     navbar.style.left = "-50%";
-    toggleBtn.innerHTML = "&#9776;";
     menuOpen = false;
   }
 }
 
-// Optional: close menu when clicking outside
 document.addEventListener('click', function (e) {
   const navbar = document.getElementById("side-navbar");
   const toggleBtn = document.getElementById("menu-toggle");
 
   if (menuOpen && !navbar.contains(e.target) && !toggleBtn.contains(e.target)) {
     navbar.style.left = "-50%";
-    toggleBtn.innerHTML = "&#9776;";
     menuOpen = false;
   }
 });
+
