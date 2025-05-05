@@ -373,22 +373,4 @@ document.addEventListener("DOMContentLoaded", function () {
                 footer.classList.remove('active'); // إعادة الأنيميشن عند مغادرة القسم
             }
         });
-   const menuBtn = document.getElementById('menu-btn');
-const navbar = document.getElementById('side-navbar');
-const overlay = document.getElementById('overlay');
 
-let isOpen = false;
-
-menuBtn.addEventListener('click', () => {
-  isOpen = !isOpen;
-  navbar.classList.toggle('active');
-  overlay.classList.toggle('active');
-  menuBtn.textContent = isOpen ? '+' : '=';
-});
-
-overlay.addEventListener('click', () => {
-  isOpen = false;
-  navbar.classList.remove('active');
-  overlay.classList.remove('active');
-  menuBtn.textContent = '=';
-});
