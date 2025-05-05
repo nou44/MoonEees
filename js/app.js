@@ -387,7 +387,7 @@ function toggleMenu() {
     navbar.style.left = "0";
     menuOpen = true;
   } else {
-    navbar.style.left = "-50%";
+    navbar.style.left = "-250px"; // حجم جديد مطابق لـ CSS
     menuOpen = false;
   }
 }
@@ -397,8 +397,15 @@ document.addEventListener('click', function (e) {
   const toggleBtn = document.getElementById("menu-toggle");
 
   if (menuOpen && !navbar.contains(e.target) && !toggleBtn.contains(e.target)) {
-    navbar.style.left = "-50%";
+    navbar.style.left = "-250px"; // نفس التعديل هنا
     menuOpen = false;
   }
 });
+
+
+
+
+
+
+
 
