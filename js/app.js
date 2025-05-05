@@ -381,13 +381,12 @@ let menuOpen = false;
 
 function toggleMenu() {
   const navbar = document.getElementById("side-navbar");
-  const toggleBtn = document.getElementById("menu-toggle");
 
   if (!menuOpen) {
-    navbar.style.left = "0";
+    navbar.style.left = "0";         // ← kayb9a kif lwal
     menuOpen = true;
   } else {
-    navbar.style.left = "-250px"; // حجم جديد مطابق لـ CSS
+    navbar.style.left = "-250px";    // ← kaykhdam m3 l width dyal 250px
     menuOpen = false;
   }
 }
@@ -396,11 +395,13 @@ document.addEventListener('click', function (e) {
   const navbar = document.getElementById("side-navbar");
   const toggleBtn = document.getElementById("menu-toggle");
 
+  // ← if clicked outside the navbar and menu button, hide the navbar
   if (menuOpen && !navbar.contains(e.target) && !toggleBtn.contains(e.target)) {
-    navbar.style.left = "-250px"; // نفس التعديل هنا
+    navbar.style.left = "-250px";    // ← nafss chi hna
     menuOpen = false;
   }
 });
+
 
 
 
