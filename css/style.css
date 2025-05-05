@@ -60,15 +60,14 @@ main{
   background-color: #ffb6c1;
 }
 
-/* === Sidebar Navbar - شكل جديد صغير ووسطي === */
 #side-navbar {
   position: fixed;
   top: 50%;
-  left: -260px; /* البداية خارج الشاشة */
+  left: -240px; /* أصغر شوية باش يختافي تماماً */
   transform: translateY(-50%);
   width: 220px;
   max-height: 80%;
-  background-color: rgba(255, 192, 203, 0.85);
+  background-color: rgba(255, 192, 203, 0.88);
   color: white;
   transition: left 0.3s ease;
   z-index: 1000;
@@ -78,9 +77,11 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden; /* يمنع العناصر من الخروج */
 }
 
-/* Center the list */
+/* باقي نفس التنسيق للداخل */
 #side-navbar ul {
   list-style: none;
   padding: 0;
@@ -91,7 +92,6 @@ main{
   align-items: center;
 }
 
-/* Each item */
 #side-navbar li a {
   text-decoration: none;
   color: #8a3472;
@@ -102,14 +102,12 @@ main{
   transition: all 0.3s ease;
 }
 
-/* Hover effect */
 #side-navbar li a:hover {
   background-color: #ffb6c1;
   color: white;
   transform: scale(1.05);
   border-color: #ffb6c1;
 }
-
 
 
 .slider{
