@@ -378,32 +378,6 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(footer);
 });
 
-let toggle = false;
-function toggleMenu() {
-  const links = document.getElementById("nav-links");
-  const icon = document.querySelector(".menu-toggle");
-  toggle = !toggle;
-  links.classList.toggle("active");
-  icon.textContent = toggle ? "✖" : "☰";
-}
-const toggle = document.getElementById('menu-toggle');
-const nav = document.getElementById('nav-links');
 
-toggle.addEventListener('click', () => {
-  nav.classList.toggle('nav-active');
-  toggle.textContent = toggle.textContent === '=' ? '+' : '=';
-});
 
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.navbar')) {
-    nav.classList.remove('nav-active');
-    toggle.textContent = '=';
-  }
-});
 
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    nav.classList.remove('nav-active');
-    toggle.textContent = '=';
-  });
-});
