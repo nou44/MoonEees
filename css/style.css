@@ -54,10 +54,8 @@ main{
     width: 100%;
     max-width: 400px;
     height: auto;
-    
-  
-    
-}
+    }
+/* Reset */
 
 
 .header {
@@ -65,34 +63,61 @@ main{
   top: 0;
   right: 0;
   padding: 1rem;
-  z-index: 1000;
+  z-index: 1001;
 }
 
+/* Menu Button */
 .menu-btn {
   font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
   background: none;
   border: none;
-  color: #ff69b4;
+  cursor: pointer;
+  color: #ff69b4; /* light pink */
 }
 
-/* Move navbar to left */
+/* Side Navbar */
 .side-navbar {
-  left: -260px; /* initially hidden */
-  right: auto;
-  transition: left 0.4s ease;
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 240px;
+  height: 100vh;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(15px);
-  border-right: 2px solid #ffb6c1; /* pink border */
+  backdrop-filter: blur(10px);
+  border-left: 2px solid #ffb6c1;
+  transition: right 0.4s ease;
+  padding: 2rem 1rem;
+  z-index: 1002;
 }
 
-/* When active (open) */
+.side-navbar ul {
+  list-style: none;
+}
+
+.side-navbar ul li {
+  margin: 1.5rem 0;
+}
+
+.side-navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  border: 2px solid transparent;
+  padding: 0.4rem 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.side-navbar ul li a:hover {
+  border: 2px solid #ffb6c1;
+  border-radius: 5px;
+}
+
+/* Show Navbar */
 .side-navbar.active {
-  left: 0;
+  right: 0;
 }
 
-/* Overlay for background when menu is open */
+/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
@@ -112,34 +137,14 @@ main{
   pointer-events: all;
 }
 
-.side-navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* Main Sections */
+main section {
+  padding: 100px 20px;
+  min-height: 100vh;
 }
 
-.side-navbar li {
-  margin: 1rem 0;
-  text-align: center;
-}
 
-.side-navbar li a {
-  text-decoration: none;
-  color: #333;
-  border: 1px solid transparent;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: all 0.3s;
-}
 
-.side-navbar li a:hover {
-  border-color: #ffb6c1;
-  color: #ff69b4;
-}
-
-.side-navbar.active {
-  right: 0;
-}
 
 
 .slider .list{
