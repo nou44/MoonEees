@@ -92,7 +92,7 @@ main{
     left: -50%;
     width: 50%;
     height: 70%;
-    background-color: (to right, #9a8b9d, #3d0149);
+  background-color: #111;
     color: white;
     transition: left 0.3s ease;
     z-index: 1000;
