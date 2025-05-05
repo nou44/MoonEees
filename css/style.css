@@ -95,8 +95,9 @@ main{
 #side-navbar a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 30px;
   transition: color 0.3s ease;
+        font-family:"Titan One", sans-serif ;
 }
 
 #side-navbar a:hover {
