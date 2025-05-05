@@ -111,16 +111,18 @@ main{
   text-align: left;
 }
 
-#side-navbar a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  transition: all 0.3s ease;
-  display: inline-block;
-  padding: 8px 12px;
-  border: 1px solid transparent;
-  border-radius: 12px;
-}
+  #side-navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    font-family: "Titan One", sans-serif;
+
+  }
 
 #side-navbar a:hover {
   color: #ffb6c1;
