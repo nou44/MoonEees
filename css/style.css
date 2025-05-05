@@ -60,47 +60,52 @@ main{
   background-color: #ffb6c1;
 }
 
-/* === Sidebar Navbar === */
+/* === Sidebar Navbar Modified === */
 #side-navbar {
   position: fixed;
   top: 0;
-  left: -50%;
-  width: 50%;
+  left: -250px; /* initially hidden */
+  width: 250px; /* fixed width instead of 50% */
   height: 100%;
-   background-color: rgba(249, 213, 244, 0.9);
+  background-color: rgba(249, 213, 244, 0.95);
   color: white;
   transition: left 0.3s ease;
   z-index: 1000;
   padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center elements horizontally */
 }
 
 #side-navbar ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 #side-navbar li {
-  margin: 20px;
-  text-align: left;
+  margin: 20px 0;
+  text-align: center; /* center text inside li */
 }
 
 #side-navbar a {
   text-decoration: none;
-color: rgb(145, 86, 141);
+  color: rgb(145, 86, 141);
   font-size: 18px;
   transition: all 0.3s ease;
   display: inline-block;
-  padding: 8px 12px;
+  padding: 10px 20px;
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 50px;
 }
 
 #side-navbar a:hover {
-  color: #ffb6c1;
+  color: white;
+  background-color: #ffb6c1;
   border-color: #ffb6c1;
+  transform: scale(1.05);
 }
-
 
 
 .slider{
