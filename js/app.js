@@ -383,7 +383,7 @@ function toggleMenu() {
   const navbar = document.getElementById("side-navbar");
 
   if (!menuOpen) {
-    navbar.style.left = "0";         // ← kayb9a kif lwal
+    navbar.style.left = "20";         // ← kayb9a kif lwal
     menuOpen = true;
   } else {
     navbar.style.left = "-250px";    // ← kaykhdam m3 l width dyal 250px
