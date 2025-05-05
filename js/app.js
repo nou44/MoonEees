@@ -373,25 +373,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 footer.classList.remove('active'); // إعادة الأنيميشن عند مغادرة القسم
             }
         });
-    }, { threshold: 0.5 });
-    
-    observer.observe(footer);
-});
-const menuBtn = document.getElementById("menu-btn");
-const sideNav = document.getElementById("side-navbar");
+   const menuBtn = document.getElementById('menu-btn');
+const navbar = document.getElementById('side-navbar');
+const overlay = document.getElementById('overlay');
 
-menuBtn.addEventListener("click", () => {
-  sideNav.classList.toggle("active");
-  menuBtn.textContent = sideNav.classList.contains("active") ? "+" : "=";
-});
+let isOpen = false;
 
-document.addEventListener("click", (e) => {
-  if (!e.target.closest("#side-navbar") && !e.target.closest("#menu-btn")) {
-    sideNav.classList.remove("active");
-    menuBtn.textContent = "=";
-  }
+menuBtn.addEventListener('click', () => {
+  isOpen = !isOpen;
+  navbar.classList.toggle('active');
+  overlay.classList.toggle('active');
+  menuBtn.textContent = isOpen ? '+' : '=';
 });
 
-
-
-
+overlay.addEventListener('click', () => {
+  isOpen = false;
+  navbar.classList.remove('active');
+  overlay.classList.remove('active');
+  menuBtn.textContent = '=';
+});
