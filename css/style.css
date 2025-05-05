@@ -87,7 +87,7 @@ main{
 
 #side-navbar a {
   text-decoration: none;
-  color: white;
+color: rgb(145, 86, 141);
   font-size: 18px;
   transition: all 0.3s ease;
   display: inline-block;
