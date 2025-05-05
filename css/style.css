@@ -56,6 +56,52 @@ main{
     height: auto;
     }
 
+/* Toggle Button */
+#menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Sidebar Navbar */
+#side-navbar {
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 60px;
+}
+
+#side-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#side-navbar li {
+  margin: 20px;
+  text-align: left;
+}
+
+#side-navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+#side-navbar a:hover {
+  color: #ffb6c1; /* pink bard */
+}
 
 
 
