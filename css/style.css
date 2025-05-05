@@ -55,19 +55,38 @@ main{
     max-width: 400px;
     height: auto;
     }
-
-/* Toggle Button */
+/* === Toggle Button (Hamburger) === */
 #menu-toggle {
   position: fixed;
   top: 20px;
   left: 20px;
-  font-size: 30px;
-  color: white;
+  width: 30px;
+  height: 25px;
   cursor: pointer;
   z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* Sidebar Navbar */
+#menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+#menu-toggle:hover .middle {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+#menu-toggle:hover .bar {
+  background-color: #ffb6c1;
+}
+
+/* === Sidebar Navbar === */
 #side-navbar {
   position: fixed;
   top: 0;
@@ -95,14 +114,19 @@ main{
 #side-navbar a {
   text-decoration: none;
   color: white;
-  font-size: 30px;
-  transition: color 0.3s ease;
-        font-family:"Titan One", sans-serif ;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 12px;
 }
 
 #side-navbar a:hover {
-  color: #ffb6c1; /* pink bard */
+  color: #ffb6c1;
+  border-color: #ffb6c1;
 }
+
 
 
 
