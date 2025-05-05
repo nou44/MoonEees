@@ -79,7 +79,7 @@ main{
 .side-navbar {
   position: fixed;
   top: 0;
-  right: -260px;
+  left: 300px;
   width: 240px;
   height: 100vh;
   background: rgba(255, 255, 255, 0.15);
