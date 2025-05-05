@@ -377,6 +377,20 @@ document.addEventListener("DOMContentLoaded", function () {
     
     observer.observe(footer);
 });
+const menuBtn = document.getElementById("menu-btn");
+const sideNav = document.getElementById("side-navbar");
+
+menuBtn.addEventListener("click", () => {
+  sideNav.classList.toggle("active");
+  menuBtn.textContent = sideNav.classList.contains("active") ? "+" : "=";
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest("#side-navbar") && !e.target.closest("#menu-btn")) {
+    sideNav.classList.remove("active");
+    menuBtn.textContent = "=";
+  }
+});
 
 
 
