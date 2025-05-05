@@ -58,62 +58,6 @@ main{
   
     
 }
-.navbar {
-  position: relative;
-  background-color: white;
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.menu-toggle {
-  font-size: 2rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-.nav-links {
-  display: none;
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-}
-
-.nav-links li {
-  margin: 0.5rem 0;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ffb6c1;
-  color: #333;
-  border-radius: 8px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.nav-links li a:hover {
-  border-color: #ffb6c1;
-  color: #ff1493;
-}
-
-.nav-active {
-  display: block;
-}
-
-@media(min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-  .nav-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 0;
-  }
-  .nav-links li {
-    margin: 0;
-  }
-}
 
 
 .slider .list{
