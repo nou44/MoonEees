@@ -401,18 +401,7 @@ document.addEventListener('click', function (e) {
     menuOpen = false;
   }
 });
-// Function to toggle sidebar menu
-function toggleMenu() {
-    const sidebar = document.getElementById('side-navbar');
-    sidebar.classList.toggle('active');
-  }
-  
-  // Close menu when a link is clicked (optional)
-  document.querySelectorAll('#side-navbar a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById('side-navbar').classList.remove('active');
-    });
-  });
+
   
 
 
