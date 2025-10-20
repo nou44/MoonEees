@@ -484,6 +484,13 @@ main{
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: bold;
+     background: linear-gradient(
+    90deg,
+    #000000 0%,
+    #ff0000 30%,
+    #ffffff 60%,
+    #000000 100%
+  );
 }
 
 /* تصميم الخط الزمني */
@@ -893,3 +900,4 @@ width: 80%;
         margin-top: 15px;
     }
 }
+
