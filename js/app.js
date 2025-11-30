@@ -93,7 +93,7 @@ scene.add(ambientLight);
 camera.position.z = 1;
 
 // إعداد التوهج (Twinkling)
-let twinkleSpeed = 0.02;
+let twinkleSpeed = 0.09;
 let direction = 1;
 
 // تحريك النجوم + التوهج
@@ -101,8 +101,8 @@ function animate() {
     requestAnimationFrame(animate);
 
     // تحريك النجوم بشكل خفيف
-    stars.rotation.y += 0.0008;
-    stars.rotation.x += 0.0005;
+    stars.rotation.y += 0.0010;
+    stars.rotation.x += 0.0009;
 
     // تطبيق تأثير التوهج (Twinkling)
     starsMaterial.opacity += direction * twinkleSpeed;
@@ -403,6 +403,7 @@ document.addEventListener('click', function (e) {
 });
 
   
+
 
 
 
